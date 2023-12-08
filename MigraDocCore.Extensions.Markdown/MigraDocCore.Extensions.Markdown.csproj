@@ -2,7 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>MigraDocCore.Extensions.Markdown</Title>
+    <Authors>Extragorey, Vertigo Ventures</Authors>
+    <Description>Adds support for Markdown in MigraDocCore documents using Markdig, ported from the MigraDoc.Extensions library by Vertigo Ventures.</Description>
+    <PackageProjectUrl>https://github.com/Extragorey/migradoccore-extensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Extragorey/migradoccore-extensions</RepositoryUrl>
+    <PackageTags>MigraDoc; MigraDocCore; MigraDoc.Extensions; PdfSharp; PdfSharpCore; HTML; Markdown</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Markdig" Version="0.33.0" />

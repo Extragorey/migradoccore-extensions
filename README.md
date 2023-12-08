@@ -1,14 +1,14 @@
 # MigraDocCore.Extensions
 
-Extensions for [MigraDocCore/PDFSharpCore](https://github.com/ststeiger/PdfSharpCore). This project was ported from the [hivvetech/migradoc-extensions](https://github.com/hivvetech/migradoc-extensions) project. It also adds support for Markdown in header or footer sections.
+Extensions for [MigraDocCore/PDFSharpCore](https://github.com/ststeiger/PdfSharpCore). This project was ported from the [hivvetech/migradoc-extensions](https://github.com/hivvetech/migradoc-extensions) project. It also adds support for HTML and Markdown in header or footer sections.
 
 ## Quick Start
 
 The biggest feature provided by this library is the ability to convert from HTML and Markdown to PDF, via MigraDocCore's Document Object Model.
 
-MigraDocCore.Extensions makes use of [Markdig](https://github.com/xoofx/markdig) (replacing MarkdownSharp in the original library) to convert from Markdown to HTML and the [Html Agility Pack](http://htmlagilitypack.codeplex.com/) to convert from HTML to PDF.
+MigraDocCore.Extensions makes use of [Markdig](https://github.com/xoofx/markdig) (replacing MarkdownSharp in the original library) to convert from Markdown to HTML and the [Html Agility Pack](https://html-agility-pack.net/) to convert from HTML to PDF.
 
-Since the MigraDoc DOM is pretty basic, much of the conversion involves setting the `Style` of generated MigraDoc `Paragraph` instances. You can then configure these styles however you like. See the [example project](https://github.com/Extragorey/migradoccore-extensions/blob/master/MigraDocCore.Extensions.Examples/Program.cs#L59) for more details.
+Since the MigraDoc DOM is pretty basic, much of the conversion involves setting the `Style` of generated MigraDoc `Paragraph` instances. You can then configure these styles however you like. See the [example project](https://github.com/Extragorey/migradoccore-extensions/blob/master/MigraDocCore.Extensions.Examples/Program.cs#L61) for more details.
 
 #### Converting from Markdown to PDF
 

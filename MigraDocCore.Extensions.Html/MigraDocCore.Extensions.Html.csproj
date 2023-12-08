@@ -2,7 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>MigraDocCore.Extensions.Html</Title>
+    <Authors>Extragorey, Vertigo Ventures</Authors>
+    <Description>Adds support for HTML in MigraDocCore documents using HtmlAgilityPack, ported from the MigraDoc.Extensions library by Vertigo Ventures.</Description>
+    <PackageProjectUrl>https://github.com/Extragorey/migradoccore-extensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Extragorey/migradoccore-extensions</RepositoryUrl>
+    <PackageTags>MigraDoc; MigraDocCore; MigraDoc.Extensions; PdfSharp; PdfSharpCore; HTML</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.54" />
