@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigraDocCore.Extensions", "MigraDocCore.Extensions\MigraDocCore.Extensions.csproj", "{334BC7D2-6AFF-4CED-A938-245405D4C70F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigraDocCore.Extensions.Html", "MigraDocCore.Extensions.Html\MigraDocCore.Extensions.Html.csproj", "{81CADB1E-3070-4E7A-8E54-148DB1585A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigraDocCore.Extensions.Markdown", "MigraDocCore.Extensions.Markdown\MigraDocCore.Extensions.Markdown.csproj", "{812320EF-F195-4A82-BD28-819F3BD999CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{F4DF53E4-13AB-4065-A4F8-81D372B74ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigraDocCore.Extensions.Examples", "MigraDocCore.Extensions.Examples\MigraDocCore.Extensions.Examples.csproj", "{B3E55412-1CBD-4F1E-BAEE-14ABF2EBE386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{334BC7D2-6AFF-4CED-A938-245405D4C70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334BC7D2-6AFF-4CED-A938-245405D4C70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334BC7D2-6AFF-4CED-A938-245405D4C70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334BC7D2-6AFF-4CED-A938-245405D4C70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CADB1E-3070-4E7A-8E54-148DB1585A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CADB1E-3070-4E7A-8E54-148DB1585A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CADB1E-3070-4E7A-8E54-148DB1585A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CADB1E-3070-4E7A-8E54-148DB1585A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812320EF-F195-4A82-BD28-819F3BD999CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812320EF-F195-4A82-BD28-819F3BD999CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812320EF-F195-4A82-BD28-819F3BD999CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812320EF-F195-4A82-BD28-819F3BD999CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E55412-1CBD-4F1E-BAEE-14ABF2EBE386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E55412-1CBD-4F1E-BAEE-14ABF2EBE386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E55412-1CBD-4F1E-BAEE-14ABF2EBE386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E55412-1CBD-4F1E-BAEE-14ABF2EBE386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3E55412-1CBD-4F1E-BAEE-14ABF2EBE386} = {F4DF53E4-13AB-4065-A4F8-81D372B74ACD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91F66301-C063-413B-A1A5-1E15A4048EAA}
+	EndGlobalSection
+EndGlobal

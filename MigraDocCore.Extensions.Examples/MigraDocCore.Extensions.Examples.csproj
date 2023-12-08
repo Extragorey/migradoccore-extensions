@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Example.html" />
+    <None Remove="Example.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="example.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="example.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MigraDocCore.DocumentObjectModel" Version="1.3.62" />
+    <PackageReference Include="MigraDocCore.Rendering" Version="1.3.62" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.62" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MigraDocCore.Extensions.Html\MigraDocCore.Extensions.Html.csproj" />
+    <ProjectReference Include="..\MigraDocCore.Extensions.Markdown\MigraDocCore.Extensions.Markdown.csproj" />
+  </ItemGroup>
+
+</Project>
