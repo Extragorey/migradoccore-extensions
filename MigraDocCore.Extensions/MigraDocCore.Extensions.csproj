@@ -11,6 +11,9 @@
     <PackageTags>MigraDoc; MigraDocCore; MigraDoc.Extensions; PdfSharp; PdfSharpCore; HTML; Markdown</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
