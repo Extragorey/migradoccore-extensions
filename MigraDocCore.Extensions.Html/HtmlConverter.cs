@@ -146,7 +146,15 @@ namespace MigraDocCore.Extensions.Html {
                 }
 
                 if (parent is HeaderFooter headerFooter) {
-                    return headerFooter.AddParagraph();
+                    // Get the last existing paragraph in the header/footer,
+                    // to avoid the bug in MigraDocCore where separate paragraphs
+                    // are written to the same position, overlapping on the page
+                    if (headerFooter.IsFooter) {
+                        p = GetHeaderFooterParagraph(headerFooter, appendNewline: true);
+                    } else {
+                        // TODO: Use this line for both headers & footers once MigraDocCore is updated to fix the bug
+                        p = headerFooter.AddParagraph();  
+                    }
                 }
 
                 if (parent is Section section) {
@@ -642,18 +650,30 @@ namespace MigraDocCore.Extensions.Html {
 
         private static Paragraph GetCellParagraph(Cell source) {
             for (var i = source.Elements.Count; i > 0; i--) {
-                if (source.Elements[i - 1] is Paragraph) {
-                    return source.Elements[i - 1] as Paragraph;
+                if (source.Elements[i - 1] is Paragraph paragraph) {
+                    return paragraph;
                 }
             }
 
             return source.AddParagraph();
         }
 
-        private static Paragraph GetHeaderFooterParagraph(HeaderFooter source) {
+        /// <summary>
+        /// Gets or adds the last paragraph in the given HeaderFooter section.
+        /// </summary>
+        /// <param name="source">The HeaderFooter section.</param>
+        /// <param name="appendNewline">If true, a double newline (\n\n) is appended
+        /// to the returned paragraph to simulate a new paragraph being added.
+        /// This is to work around the issue in MigraDocCore where new paragraphs
+        /// are written to the same position (and hence overlap) in footer sections.</param>
+        /// <returns>A Paragraph object in the given section.</returns>
+        private static Paragraph GetHeaderFooterParagraph(HeaderFooter source, bool appendNewline = false) {
             for (var i = source.Elements.Count; i > 0; i--) {
-                if (source.Elements[i - 1] is Paragraph) {
-                    return source.Elements[i - 1] as Paragraph;
+                if (source.Elements[i - 1] is Paragraph paragraph) {
+                    if (appendNewline) {
+                        paragraph.AddText("\n\n");
+                    }
+                    return paragraph;
                 }
             }
 
@@ -662,8 +682,8 @@ namespace MigraDocCore.Extensions.Html {
 
         private static Paragraph GetSectionParagraph(Section source) {
             for (var i = source.Elements.Count; i > 0; i--) {
-                if (source.Elements[i - 1] is Paragraph) {
-                    return source.Elements[i - 1] as Paragraph;
+                if (source.Elements[i - 1] is Paragraph paragraph) {
+                    return paragraph;
                 }
             }
 

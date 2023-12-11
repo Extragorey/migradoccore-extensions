@@ -96,6 +96,13 @@ To use a custom converter instance use the `Section.Add(string content, IConvert
 Note that an element handler should not process any inner HTML. For example the handler for a `<h1>` tag only adds a paragraph with a the style "Heading1", it does not add the text (there is a separate handler for processing text nodes).
 
 
+#### Known issues
+
+As of PdfSharpCore v1.3.62 there appears to be a bug where multiple paragraphs in footer sections are written in the same position, overlapping each other. This extension works around the bug by using a single paragraph in footer sections, adding newlines as needed. In practice, this means some paragraph-level formatting may not be fully supported in footers (e.g. headings, lists).
+
+I have [opened an issue](https://github.com/ststeiger/PdfSharpCore/issues/414) in the PdfSharpCore repo to track the progress of this bug.
+
+
 ## License
 
 Licensed under the MIT License.

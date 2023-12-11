@@ -22,6 +22,7 @@ namespace MigraDocCore.Extensions.Examples {
             var section = doc.AddSection();
 
             section.Headers.Primary.AddMarkdown("**This** is a *header* rendered by Markdown.");
+            section.Headers.Primary.AddMarkdown("*Another* header line.");
 
             var html = File.ReadAllText("example.html");
             section.AddHtml(html);
@@ -43,7 +44,17 @@ namespace MigraDocCore.Extensions.Examples {
             row.Cells[0].AddMarkdown(markdown);
             row.Cells[1].AddParagraph("Second cell");
 
-            section.Footers.Primary.AddMarkdown("This is a **formatted** footer with *fancy* text.");
+            section.Footers.Primary.AddMarkdown("""
+                Footer lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nibh sit amet lacus ultrices in mollis sapien eleifend.
+                Mauris congue luctus elit sit amet elementum. Integer nisl sapien, tristique et venenatis nec, auctor ac risus. Pellentesque et nisl eu risus pretium elementum.
+
+                This&nbsp;
+                *should*&nbsp;
+                collapse&nbsp;
+                to&nbsp;
+                **one**&nbsp;
+                line
+                """);
 
             var renderer = new PdfDocumentRenderer();
             renderer.Document = doc;
